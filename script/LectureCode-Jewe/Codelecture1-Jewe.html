@@ -1,0 +1,26 @@
+
+<!--this is the formula to add data straight in to html from js, no need to create file/link from js, only imagine first -->
+
+<script type="text/javascript">
+    
+    var name = "Lamar Alexander";
+    var URL = "http://google.com";
+    var missedVotes = 50;
+    var missedPct = 99;
+
+    console.log("Starting JS");
+
+    var tr = $('<tr>')
+
+    var link = $('<a>').attr('href',URL).attr('target','_blank').text(name)
+
+    $('<td>').append(link).appendTo(tr);
+
+    tr.append( $('<td>').text(missedVotes) );
+
+    var lastTD = $('<td>').text(missedPct + " %")
+    tr.append(lastTD)
+
+    tr.appendTo('#mostEng')
+
+</script>

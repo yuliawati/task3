@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Senate Starter</title>
+
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!--link css dibawah ini untuk tambahan style saja bila ingin menambahakan style dari bootstrapt-->
+  <link rel="stylesheet" type="text/css" href="style/senate-style.css">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Archivo+Black" rel="stylesheet">
+
+</head>
+
+<body class ="container table-responsive">
+ <!--setelah buat table dan insert, create a header/banner diatas utk insert the menu-->
+ <header>
+  <img src="images/images.png" alt="logocongress">
+  <h1>TGIF</h1>
+  <div id="contact">
+    <a class="email" href="info@tgf.net">Email Us</a>
+    <img class="envelope" src="images/email.png" alt="emaillogo">
+  </div>
+
+</header>
+
+
+<nav class="navbar navbar-inverse">
+  <ul class="nav navbar-nav">
+    <li class="active"><a href="home-starter-page.html">Home</a></li>
+    <li class="dropdown">
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#">Congress 113
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="senate-starter-page.html">Senate</a></li>
+          <li><a href="house-starter-page.html">House</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#">Attendance
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="senate-attendance-starter-page.html">Senate</a></li>
+          <li><a href="house-attendance-starter-page.html">House</a></li>
+        </ul>
+    </li>
+    <li class="dropdown">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Party Loyalty
+      <span class="caret"></span></a>
+      <ul class="dropdown-menu">
+          <li><a href="senate-party-loyalty-starter-page.html">Senate</a></li>
+          <li><a href="house-party-loyalty-starter-page.html">House</a></li>
+      </ul>
+    </li>
+    </ul>
+  </nav>
+  
+  <div>
+   <h2>Congressmen</h2>
+  <p>The major power of the House is to pass federal legislation that affects the entire country, although its bills must also be passed by the Senate and further agreed to by the U.S. President before becoming law (unless both the House and Senate re-pass the legislation with a two-thirds majority in each chamber). The House has some exclusive powers: the power to initiate revenue bills, to impeach officials (impeached officials are subsequently tried in the Senate), and to elect the U.S. President in case there is no majority in the Electoral College.</p>
+  <p>Each U.S. state is represented in the House in proportion to its population as measured in the census, but every state is entitled to at least one representative. </p>
+  </div>
+
+
+    <!--Table container-->
+    <form name="party-filter" class="selectors""><b>Filter by Party</b>
+      <input name ="party-filter" type="checkbox" id="inlineCheckbox1" value="R"><label class="checkbox-inline">Republican
+        </label>
+       <input name ="party-filter" type="checkbox" id="inlineCheckbox2" value="D"><label class="checkbox-inline">Democrat
+        </label>
+      <input name ="party-filter" type="checkbox" id="inlineCheckbox3" value="I"><label class="checkbox-inline">Independent
+        </label>
+    </form>
+
+  <div class="stateselectors"><b>Filter by State</b> 
+        <!--ingin buat select button list drop scroll down-->
+     <select id="stateSelector">
+      <option>Choose State</option>
+     </select>  
+ </div>
+
+<table id="congress-table"  class="table table-striped toggle-circle-filled">
+   <thead>
+     <tr>
+      <th data-toggle="true">Congressman</th>
+      <th>Party</th>
+      <th>State</th>
+      <th>Seniority</th>
+      <th>Total Votes</th>
+    </tr>
+  </thead>
+    <tbody id ="house-data">
+    </tbody>
+</table>
+
+
+
+      <footer>&copy; 2016 TGIF | All Right Reserved
+      </footer>
+
+<!--insert : jquery-->
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+<!--insert : link file dari html congress-->
+<script type="text/javascript" src="data/NYT-congress-113-house.json"></script>
+<script type="text/javascript" src="script/NYT-congress-113-house.js"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+
+<!--insert : bootstrapt's yang ke 3 link-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> 
+
+
+
+</body>
+</html>
